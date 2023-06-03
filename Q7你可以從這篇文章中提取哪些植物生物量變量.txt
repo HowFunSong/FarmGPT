@@ -1,0 +1,108 @@
+1.利用chaining 問 "你可以從這篇文章中提取哪些植物生物量變量？"
+  {
+        "docs": "hydrochloride and 4-  (dimethylamino) pyridine and acetic anhy -dride, and the AS derivatives were separated on a DB-  5MS column (30 m × 0.25 mm × 0.25 mm) with temperature program set by Zhang and Amelung (1996). Separation of AS derivatives was carried out on an Agilent 6890 GC (Agilent Technologies) equipped with a Scientific Ultra-  2 column (25 m × 0.2 mm × 0.33 μm) and flame ionization de -tector. The individual AS derivatives were separated by referencing the retention times of authentic standards containing GluN, GalN, ManN, and MurA. We normalized AS-  C contents by their molecular mass and calculated total soil AS-  C as the sum of GluN-  C, GalN-  C, ManN, and MurA-  C (Joergensen, 2018).2.4  |  Soil propertiesSoil pH was measured at a ratio of fresh soil to water ratio of 1:2.5 (soil:water) by a pH electrode (Leici). SOC and total nitrogen con -tent of air-  dried soils were measured with an elemental analyzer after being ground by a ball mill (MAT-  253; Thermo Fisher Scientific). Contents of clay and silt of air-  dried bulk soil were determined by the hydrometer method.2.5  |  Climate and plant biomassThe MAP and MAT of each sampling site were extracted from maps of global temperature and precipitation provided by WorldClim database (www.world  clim.org). The plant aboveground standing biomass C (AGBC, Mg  C ha−1) and belowground standing biomass C (BGBC, Mg  C ha−1) for each site were extracted from maps that were developed by Spawn et al. (2020). These data are accessible through the Oak Ridge National Laboratory (ORNL) DAAC data repository (https://doi.org/10.3334/ORNLD  AAC/1763). Finally, all maps were imported into ArcGIS (version 10.2, ESRI) and then the values of cli -mate variables and plant biomass for each site were extracted using coordinates (latitude and longitude) of our sampling sites.2.6  |  Statistical analysesFirst, we explored the relationships between SOC and C pools (MBC, MNC, AGBC, and BGBC), climate variables (MAP and MAT), soil variables (soil pH and clay), and microbial physiological vari -ables (CUE and τ). Second, we conducted a random forest analysis to identify the relative importance of a given variable compared with other variables. This analysis was run using the randomForest  (https://www.stat.berke  ley.edu/~breim  an/Rando mForests) and rfPermute  (https://github.com/EricA  rcher/  rfPer  mute) packages in R",
+        "facts": "1. Soil organic carbon and microbial physiological variables were measured in a study. 2. AS derivatives were separated using a DB-5MS column and an Agilent 6890 GC.3. Soil pH, SOC, and total nitrogen were measured with an elemental analyzer.4. Climate and plant biomass variables were extracted from WorldClim database and ORNL DAAC data repository.5. Random forest analysis was used to identify relative importance of variables.",
+        "question": "你可以從這篇文章中提取哪些植物生物量變量？",
+        "response": "從這篇文章中可以提取的植物生物量變量包括植物體積、植物高度、植物表面積、植物重量、植物面積比、植物密度、植物結構指數和植物分布等。"
+    },
+
+
+
+
+
+
+### 用doc search 找出related docs 
+[Document(page_content='imported into ArcGIS (version 10.2, ESRI) and then the values of cli -mate variables and plant biomass for each site were extracted using coordinates (latitude and longitude) of our sampling sites.2.6\u2003 |\u2003 Statistical analysesFirst, we explored the relationships between SOC and C pools (MBC, MNC, AGBC, and BGBC), climate variables (MAP and MAT), soil variables (soil pH and clay), and microbial physiological vari -ables (CUE and τ). Second, we conducted a random forest analysis to identify the relative importance of a given variable compared with other variables. This analysis was run using the randomForest  (https://www.stat.berke  ley.edu/~breim  an/Rando mForests) and rfPermute  (https://github.com/EricA  rcher/  rfPer  mute) packages in R 3.5.3 (R Core Team, 2019). Third, we used GLM to examine if includ -ing microbial physiological variables (CUE, τ, and MBC) and MNC could better explain the variations of SOC than the model without them. To do this, we built three models with different numbers of SOC response variables: model A included all predictors; model B included all except MNC; and model C included all except for micro -bial physiological variables (CUE, τ, and MBC) and MNC. The Akaike information criterion (AIC) was used to select the best model and the lower AIC means a better-  fit model. This analysis was run using the MuMIn  package (version 1.43.15, https://cran.r-  proje  ct.org/web/packa  ges/MuMIn/  index.html). Finally, we used structural equation modeling (SEM) to evaluate the direct and indirect effects of MAT, BGBC, soil clay, and microbial physiological variables (MBC, CUE, and τ) and necromass on SOC. We started the SEM procedure with (2)Growth =fDNA∗DNAproduced ∗1000DW∗t,(3) Respiration =RsDW∗t∗p∗nR∗T∗V∗1000,(4) CUE=CgrowthCgrowth+Respiration,(5) /u1D70F=DNAproduced ∗24DNAcontent ∗t∗365, 13652486, 2021, 10, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/gcb.15550 by National Cheng Kung University, Wiley Online Library on [21/04/2023]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License', metadata={}),
+
+ Document(page_content='|\u2003 2047WANG et Al.DATA AVAILABILITY STATEMENTAll data are available in the main text or the Supporting Information and raw data are available upon request from the corresponding  author. Further reference and link to public data sources are given in Section 2.ORCIDChao Wang   https:/ /orcid.org/0000-0002-5756-7505  Ember Morrissey   https:/ /orcid.org/0000-0002-5810-1096  Renhui Miao   https:/ /orcid.org/0000-0001-6576-6216  Qingkui Wang   https:/ /orcid.org/0000-0002-5001-0851  Yunting Fang   https:/ /orcid.org/0000-0001-7531-546X  Edith Bai  https:/ /orcid.org/0000-0003-0495-6504  REFERENCESBradford, M. A., Keiser, A. D., Davies, C. A., Mersmann, C. A., & Strickland, M. S. (2013). Empirical evidence that soil carbon formation from plant inputs is positively related to microbial growth. Biogeochemistry , 113(1), 2 7 1 –  2 8 1 .  h t t p s : / / d o i . o r g / 1 0 . 1 0 0 7 / s 1 0 5 3  3 - 0 1 2 -  9 8 2 2 -  0Chen, S., Wang, W., Xu, W., Wang, Y., Wan, H., Chen, D., Tang, Z., Tang, X., Zhou, G., Xie, Z., Zhou, D., Shangguan, Z., Huang, J., He, J.-  S., Wang, Y., Sheng, J., Tang, L., Li, X., Dong, M., … Bai, Y. (2018). Plant diversity enhances productivity and soil carbon storage. Proceedings of the National Academy of Sciences of the United States of America , 115(16), 4027–  4032. https://doi.org/10.1073/pnas.17002  98114Coskun, Ö. K., Özen, V., Wankel, S. D., & Orsi, W. D. (2019). Quantifying population-  specific growth in benthic bacterial communities under low oxygen using H218O. The ISME Journal , 13(6), 1546–  1559. h t t p s : / / d o i . o r g / 1 0 . 1 0 3 8 / s 4 1 3 9  6 - 0 1 9 -  0 3 7 3 -  4Cotrufo, M. F., Wallenstein, M. D., Boot, C. M., Denef, K., & Paul, E. (2013). The Microbial Efficiency-  Matrix Stabilization (MEMS) framework integrates plant litter decomposition with soil organic matter stabilization: Do labile plant inputs form stable soil or -ganic matter? Global Change Biology , 19(4), 988–  995. https://doi.org/10.1111/gcb.12113Crowther, T. W., Todd-  Brown, K. E. O., Rowe, C. W., Wieder, W. R., Carey, J. C., Machmuller, M. B., Snoek, B. L., Fang, S., Zhou, G., Allison, S. D., Blair, J. M., Bridgham, S. D., Burton, A. J., Carrillo, Y., Reich, P. B., Clark, J. S., Classen, A. T., Dijkstra, F. A., Elberling, B., … Bradford, M. A. (2016). Quantifying global soil carbon losses in response to warming. Nature , 540(7631), 104–  108. https://doi.org/10.1038/natur e20150', metadata={}),
+
+ Document(page_content='|\u2003 2041WANG et Al.equation modeling to assess the roles of climate, plant, soil, micro -bial physiological traits, and necromass in SOC content. We hypoth -esize that (1) MBC and necromass C had positive relationships with the SOC content across the large spatial scale; (2) soil microbial CUE decreased with mean annual temperature (MAT) and precipitation (MAP) of sampling sites, while microbial biomass turnover rate in -creased with MAT and MAP; both were important to the spatial vari -ations of MBC and SOC; and (3) the regression model representing microbial physiological parameters could better explain the varia -tions of SOC across the large spatial scale than the one without the microbial physiological parameters.2\u2003|\u2003MATERIALS AND METHODS2.1\u2003 |\u2003 Experimental designSoil samples were collected from 16 forest sites along a north– south transect in eastern China (Figure S1). These sites cover three different forest types: temperate forests (NWH, Nanweng River; BKT, Boke Tu; LS, Liangshui; ME, Maoer Mountain; CB, Changbai Mountain; QY, Qingyuan; DL, Dongling Mountain; TS, Tai Mountain), subtropical forests (BZ, Bazhong; JG, Jigong Mountain; XS, Xian Mountain; NP, Nanping; HT, Huitong; DH, Dinghu Mountain), and tropical forests (JFL-  N, Jianfengling-  natural forest; JFL-  S, Jianfengling-  secondary forest). MAT at the sampling sites ranges from −2.4 ℃ a t  N W H  t o  2 0 . 9 ℃ at DH and MAP ranges from 474 at BKT to 2449 mm at JFL. More detailed information for sampling sites can be found in Table S1. At each site, three 20 × 20 m large plots were randomly established with a distance of >10 m between each other within a 100 × 100 m sampling plot and five 2 × 2 m subplots were selected within each large plot (each corner and the center of the plot). The spatial geographical coordinates and eleva -tion of each site were recorded by GPS (eTrex Venture, Garmin). In each 2 × 2 m subplot, five random soil samples (0–  10 cm) were col -lected using a soil corer (2.5-  cm diameter) and were homogenized by hand and pooled as one composite sample. The soil samples were collected by 16 groups at the same time from August 18 to 20, 2018 (finished within 2 days). All soil samples were then placed in a box with icebags (to keep the temperature inside between 2 ℃ and 6 ℃) and shipped to the laboratory in the Institute of Applied Ecology, Chinese Academy of Sciences at Shenyang, China within 4 days.', metadata={}),
+
+ Document(page_content='2042\u2003 |\u2003\u2003\u2002WANG et Al.A conversion factor ( fDNA) was calculated at each specific sample to represent the ratio of soil MBC to soil DNA content ( μg g−1 soil). Microbial growth rate (Growth, ng C g−1 soil h−1) was calculated by multiplying the DNA production rate and fDNA:where DW (g) is the dry weight of soil and t i s  th e  i n c u b a ti o n  ti m e  (h). Additionally, microbial basal respiration rate (Respiration, ng C g−1 soil h−1) was calculated by the following equation:where p is the atmosphere pressure (kPa), n  is the molecular mass of the element C (12.01  g mol−1), R is the ideal gas constant (8.314  J mol−1 K−1), and T is the absolute temperature of the gas (295.15  K). V is the head -space volume (L) of the vials. Rs (ppm) is the amount of CO2 concentra -tion produced during the 24-  h incubation period.Microbial CUE and microbial biomass turnover rate ( τ, year−1) were calculated by the following equations (Spohn et al., 2016):  where DNAcontent (μg) is the DNA content in each soil, and t is incuba -tion time in hours.2.3\u2003 |\u2003 Measurement of ASWe used ASC in soil to indicate the soil microbial necromass C (MNC; Joergensen, 2018). ASs, including glucosamine (GluN), galac -tosamine (GalN), mannosamine (ManN), and muramic acid (MurA), were determined according to the protocol of Zhang and Amelung (1996). Briefly, soil samples (containing about 0.3 mg N) were hy -drolyzed with 6 M HCl (10 ml) for 8 h, and the solution was subse -quently filtered, centrifuged, and freeze-  dried. Methanol was then added to the freeze-  dried supernatants and centrifuged to extract ASs from the residues. The ASs were reacted with hydroxylamine hydrochloride and 4-  (dimethylamino) pyridine and acetic anhy -dride, and the AS derivatives were separated on a DB-  5MS column (30 m × 0.25 mm × 0.25 mm) with temperature program set by Zhang and Amelung (1996). Separation of AS derivatives was carried out on an Agilent 6890 GC (Agilent Technologies) equipped with a Scientific Ultra-  2 column (25 m × 0.2 mm × 0.33 μm) and flame ionization de -tector. The individual AS derivatives were separated by referencing the retention times of authentic standards containing GluN, GalN, ManN, and MurA. We normalized AS-  C contents by their molecular mass and calculated total soil AS-  C as the sum of GluN-  C, GalN-  C, ManN, and MurA-  C (Joergensen, 2018).2.4\u2003 |\u2003 Soil properties', metadata={})]
+
+==================
+
+2.利用embedding search related docs 用 stuff 問 "你可以從這篇文章中提取哪些植物生物量變量？"
+ "response" : 從這篇文章中可以提取植物生物量變量包括AGBC和BGBC。
+
+==================
+
+3.利用embedding search related docs 用 maprerank 問 "你可以從這篇文章中提取哪些植物生物量變量？"
+"response" : 
+{'intermediate_steps': [{'answer': ' 植物生物量變量包括有木本碳池（MBC）、有機碳池（MNC）、可植物有機碳池（AGBC）和非植物有機碳池（BGBC）。',
+   'score': '100'},
+  {'answer': ' This document does not answer the question', 'score': '0'},
+  {'answer': ' 從文章中可以提取生物量碳（MBC）和死亡物質碳（necromass C）變量。', 'score': '100'},
+  {'answer': ' 從本文中可以提取的植物生物量變量有微生物生長率（Growth，ng C g−1 soil h−1），微生物基礎呼吸率（Respiration，ng C g−1 soil h−1），微生物利用效率（CUE）和微生物生物量轉換速率（τ，year−1）。',
+   'score': '90'}],
+ 'output_text': ' 植物生物量變量包括有木本碳池（MBC）、有機碳池（MNC）、可植物有機碳池（AGBC）和非植物有機碳池（BGBC）。'}
+
+
+==================
+
+4. 用relate doc中的 facts 來針對問題做整理
+
+prompt_template#1
+template_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Text/Summary :
+{facts_text}
+
+%Question :
+{question}
+
+Write a system review article ,the topic is the question. 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+
+"response" : 本文將詳細介紹植物生物量變量，以及從這篇文章中如何提取這些變量的方法。文章中提取的植物生物量變量主要包括：土壤有機碳（SOC）、土壤pH值、總氮含量、氣候變量和植物生物量變量。首先，土壤有機碳和微生物生理學變量可以通過採集土壤樣品，並使用元素
+
+-------------------------
+prompt_template#2
+
+template_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Question :
+{question}
+
+%Text/Summary :
+{facts_text}
+
+
+Given a question, write a systematic answer . 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+"response" :從這篇文章中可以提取的植物生物量變量有：土壤有機碳、微生物生理學變量、土壤pH值、有機碳含量、總氮含量、氣候變量、植物生物量變量、DNA提取物、甲基氯仿提取物、微生物生長率、微生物基礎呼吸率、微生物熱效率、微生物生物量轉化率、糖胺類化合物、葡萄糖胺碳、半乳糖
+
+-----------------------
+prompt_template#3
+template_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Question :
+{question}
+
+%Text/Summary :
+{facts_text}
+
+
+Given a question, write a systematic answer, if possible, give explanation for it. 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+
+prompt_template_response = PromptTemplate(input_variables=["facts_text", "question"],template=template_response)
+response_chain = LLMChain(llm=llm, prompt=prompt_template_response, output_key="response")
+
+從這篇文章中，我們可以提取到的植物生物量變量包括：土壤有機碳（SOC）、微生物生理變量、土壤 pH、總氮、氣候和植物生物量變量、DNA提取物、甲基氯仿提取法（CH3Cl fumigation extraction method）測定的微生物生物量（MBC）、提取效率因子、微生物生長率、微生物基礎呼吸率、微生物利用效率（CUE)
+
+從這篇文章中可以提取的植物生物量變量包括：土壤有機碳（Soil organic carbon）、微生物生理學變量（microbial physiological variables）、土壤pH值（Soil pH）、總氮（Total nitrogen）、植物生物量變量（Plant biomass variables）、轉換因子（fDNA）、微生物生長率（Microbial growth rate）、微生物基礎呼吸率（Microbial basal respiration rate）、微生物利用效率（Microbial CUE）、微生物生
+
+從這篇文章中可以提取以下植物生物量變量：土壤有機碳（SOC）、土壤pH值、總氮含量、氣候變量、植物生物量變量、DNA提取率、微生物生長率、微生物基礎呼吸率、微生物利用效率（CUE）、微生物生物量翻轉率、氨基糖苷（AS）包括葡萄糖胺（GluN-C）、半乳糖胺（GalN-

@@ -1,0 +1,46 @@
+Q"什麼因素會影響微生物碳利用效率"
+
+1.利用embedding search related docs 用 stuff 問 "什麼因素會影響微生物碳利用效率？"
+
+response : 周圍環境因素，例如溫度和降雨量，會影響微生物碳的利用效率。
+
+
+
+
+2.利用embedding search related docs 用 maprerank 問"什麼因素會影響微生物碳利用效率"
+
+{'intermediate_steps': [{'answer': ' Temperature, plant litter decomposition, soil organic matter stabilization, accessibility, diversity and biogeography of soil bacterial communities.',
+   'score': '100'},
+  {'answer': ' 氣候因子、土壤因子和微生物生理參數', 'score': '100'},
+  {'answer': ' 降雨量、溫度、土壤有機碳池容量以及植物碳池容量', 'score': '100'},
+  {'answer': ' Microbial turnover rate and CUE ', 'score': '100'}],
+ 'output_text': ' Temperature, plant litter decomposition, soil organic matter stabilization, accessibility, diversity and biogeography of soil bacterial communities.'}
+
+
+
+3.用embedding 去找facts ->用設計過的模板問
+
+template_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Question :
+{question}
+
+%Text/Summary :
+{facts_text}
+
+
+Given a question, write a systematic answer, if possible, give explanation for it. 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+
+
+因素影響微生物碳利用效率包括氣候因子、土壤因子和微生物生理參數。氣候因子，如溫度和降水量，可以影響微生物的代謝活性和維持能源成本，也會影響微生物碳利用效率；土壤因子，如植物生物量和有機碳含量，也會影響微生物碳利用效率；微生物生理參數則會影
+
+
+碳利用效率受到許多因素的影響，包括氣候因素、土壤因素、植物生物量及土壤有機碳含量等。氣候因素包括溫度、降雨量等，溫度會影響微生物的代謝活性，而降雨量會影響土壤有機碳的轉化率。土壤因素包括pH值、粘土含量等，pH值是控制微生物群落組成及
+
+
+多種因素會影響微生物碳利用效率，其中包括氣候因素、土壤因素、植物生物量等。氣候因素如溫度、降雨量會影響微生物的活性和維持能源成本，而土壤因素如土壤pH值、粘土含量會影響微生物群落的組成和活性。此外，植物生物量也會影響土壤有機碳的含量，地

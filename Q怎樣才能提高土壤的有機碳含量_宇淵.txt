@@ -1,0 +1,52 @@
+Q怎樣才能提高土壤的有機碳含量
+
+1.利用embedding search related docs 用 stuff 問 "怎樣才能提高土壤的有機碳含量？"
+ Increasing soil organic carbon content can be done by increasing plant inputs, increasing soil microbial growth, increasing plant diversity, and reducing soil carbon losses due to warming.
+
+
+
+2.利用embedding search related docs 用 maprerank 問 "怎樣才能提高土壤的有機碳含量？"
+{'intermediate_steps': [{'answer': ' 根據 Bradford et al. (2013)、Chen et al. (2018)、Coskun et al. (2019)、Cotrufo et al. (2013) 和 Crowther et al. (2016) 的研究，增加植物多樣性、提高植物投入對土壤碳的形成、提高微生物生長和穩定土壤有機物的機制可以提高土壤的有機碳含量。',
+   'score': '100'},
+  {'answer': ' This document does not answer the question', 'score': '0'},
+  {'answer': ' 通過對土壤pH、SOC和總氮含量進行分析，並從WorldClim數據庫和ORNL DAAC數據庫提取氣候和植物生物量變量，使用隨機森林分析來確定變量的相對重要性，以提高土壤有機碳含量。',
+   'score': '100'},
+  {'answer': ' 增加植物的地下C生物量，增加地下C源的入口，更有效地分解微生物的死體。', 'score': '80'}],
+ 'output_text': ' 根據 Bradford et al. (2013)、Chen et al. (2018)、Coskun et al. (2019)、Cotrufo et al. (2013) 和 Crowther et al. (2016) 的研究，增加植物多樣性、提高植物投入對土壤碳的形成、提高微生物生長和穩定土壤有機物的機制可以提高土壤的有機碳含量。'}
+
+
+3.用embedding 去找doc來問
+template_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Question :
+{question}
+
+%Text/Summary :
+{facts_text}
+
+
+Given a question, write a systematic answer, if possible, give explanation for it. 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+
+prompt_template_response = PromptTemplate(input_variables=["facts_text", "question"],template=template_response)
+response_chain = LLMChain(llm=llm, prompt=prompt_template_response, output_key="response")
+
+回答1 :
+要提高土壤的有機碳含量，可以透過多種方法來實現。首先，可以通過改變土壤pH值來改善微生物群落組成和活性，以促進有機碳的穩定性和累積。其次，可以增加土壤的黏土含量，以減少有機碳的分解速率。此外，可以增加植物根系地下碳生物量，並比上地
+
+回答2  :
+要提高土壤的有機碳含量，最重要的是改善土壤的pH值，因為pH值是影響微生物群落結構和活性的最重要因素。另外，粘土含量的增加可以降低微生物的轉化率，並且可以從根體周圍溶解有機碳的入口更有效地進行植物的地下C投入，而不是地上投入。此外，植物地下C生物
+
+
+回答3  :
+要提高土壤中的有機碳含量，最重要的是控制土壤pH值，因為它是影響微生物群落組成和活性的最重要因素。此外，增加土壤中的黏土含量也會降低微生物的轉化率。另外，根系下面的植物碳生物量比上面的植物碳生物量更有助於提高土壤有機碳含量。
+
+
+回答4  :
+要提高土壤有機碳含量，可以通過改變土壤pH值、增加粘土含量、增加植物根下面的碳生物量、提高植物的原始生產力、增加植物根下面的溶解有機碳入口等方法來實現。 Bradford等人（2013）研究了植物投入對土壤碳形成和微生物生長之間的關係，Chen等人（2018）發現植物多樣
+
+

@@ -1,0 +1,55 @@
+1.利用chaining 問 "這篇文章中，東部中國北部站點與南部站點的土壤有機碳含量有何不同？"
+
+{
+        "docs": "|  2043WANG et Al.the specification of a conceptual model of hypothetical relation -ships, based on a priori and theoretical knowledge (Figure S2). In the SEM analysis, we compared the model-  implied variance–  covariance matrix against the observed variance–  covariance matrix. Data were fitted to the models using both the maximum-  likelihood estimation method and the Bayesian analysis. For simplicity, the least significant path was deleted and the model was re-  estimated; then the next least significant path was removed, and so on, until the paths that remained in the final SEM were all significant. Model fit statistics include the degree of freedom ( df), ratio of chi-  square and df (χ2/df), probability level ( p), R2 (proportion of variance explained), and com -parative fit index. The SEM analysis was conducted in the environ -ment of Amos 20.0 (Amos Development Company).3 | RESULTS3.1  |  SOC across large spatial scalesFor soils sampled from 16 spatially dispersed forest sites across east -ern China (Figure S1; Table S1), the SOC content generally  decreased from northern sites to southern sites, with a range of 18.3– 108.7 mg C g−1 soil and an average of 43.6 mg C g−1 soil (T able S2). Similarly, soil MBC and ASC showed a declining pattern from north to south with a range from 0.11 to 3.78 mg C g−1 soil and from 0.38 to 2.31 mg C g−1 soil, respectively (Table S2).Across all sites, MBC and AS were significantly positively cor -related with SOC (Figure 1a,b). After removing the two points with the highest SOC values, the correlation between AS and SOC got less strong ( R2 = 0.64 vs. R2 = 0.90 with the two samples), but still indicating the robust correlation between the two parameters. A marginal positive correlation between belowground biomass C (BGBC) and SOC was observed (Figure 1d; R2 = 0.19, p = 0.09), but aboveground biomass C (AGBC) was not correlated with SOC (Figure 1c). There were significant negative relationships between SOC and MAP (Figure 2a) and MAT (Figure 2b), while positive rela -tionships between SOC and soil clay content (Figure 2d) and micro -bial CUE (Figure 2e) were observed.3.2  |  Responses of microbial physiological variables to climatic and edaphic factorsRegression analyses showed that microbial CUE was negatively cor -related with MAP (Figure 3a; R2 = 0.38, p <  0.01) and MAT (Figure 3b; R2 = 0.52, p <  0.01), but was marginally positively correlated with soil",
+        "facts": "1. SOC content generally decreased from northern sites to southern sites in eastern China. 2. MBC and ASC showed a declining pattern from north to south.3. MBC and ASC were significantly positively correlated with SOC.4. There were significant negative relationships between SOC and MAP and MAT.5. There were positive relationships between SOC and soil clay content and microbial CUE.6. Microbial CUE was negatively correlated with MAP and MAT.",
+        "question": "這篇文章中，東部中國北部站點與南部站點的土壤有機碳含量有何不同？",
+        "response": "答案是：從北部站點到南部站點，有機碳含量會整體呈現下降的趨勢。"
+    },
+=============================
+### 用doc search 找出related docs 
+[Document(page_content='1. Soil samples were collected from 16 forest sites along a north– south transect in eastern China.2. The sites cover three different forest types: temperate, subtropical and tropical forests.3. Mean annual temperature (MAT) of the sampling sites ranges from -2.4°C to 20.9°C.4. Mean annual precipitation (MAP) of the sampling sites ranges from 474 to 2449 mm.5. Five 2x2m subplots were selected within each large plot.6. Five random soil samples (0-10 cm) were collected from each subplot.7. Soil samples were collected by 16 groups within 2 days and shipped to the laboratory within 4 days.8. Hypotheses: MBC and necromass C had positive relationships with the SOC content across the large spatial scale; soil microbial CUE decreased with MAT and MAP and microbial biomass turnover rate increased with MAT and MAP; regression model representing microbial physiological parameters could better explain the variations of SOC across the large spatial scale.', metadata={}),
+ Document(page_content='1. SOC content generally decreased from northern sites to southern sites in eastern China. 2. MBC and ASC showed a declining pattern from north to south.3. MBC and ASC were significantly positively correlated with SOC.4. There were significant negative relationships between SOC and MAP and MAT.5. There were positive relationships between SOC and soil clay content and microbial CUE.6. Microbial CUE was negatively correlated with MAP and MAT.', metadata={}),
+ Document(page_content='1. Soil organic carbon and microbial physiological variables were measured in a study. 2. AS derivatives were separated using a DB-5MS column and an Agilent 6890 GC.3. Soil pH, SOC, and total nitrogen were measured with an elemental analyzer.4. Climate and plant biomass variables were extracted from WorldClim database and ORNL DAAC data repository.5. Random forest analysis was used to identify relative importance of variables.', metadata={}),
+ Document(page_content='1. All data are available in the main text or the Supporting Information and raw data are available upon request from the corresponding author. 2. ORCID links are provided for each author. 3. Bradford et al. (2013) studied the relationship between soil carbon formation from plant inputs and microbial growth. 4. Chen et al. (2018) found that plant diversity increases productivity and soil carbon storage. 5. Coskun et al. (2019) used H218O to quantify population-specific growth in benthic bacterial communities under low oxygen. 6. Cotrufo et al. (2013) proposed the Microbial Efficiency-Matrix Stabilization (MEMS) framework to integrate plant litter decomposition with soil organic matter stabilization. 7. Crowther et al. (2016) quantified global soil carbon losses in response to warming.', metadata={})]
+---------------------------------------------
+2.利用embedding search related docs 用 stuff 問 "這篇文章中，東部中國北部站點與南部站點的土壤有機碳含量有何不同？"
+
+ "response" :  北部站點的土壤有機碳含量比南部站點高。
+---------------------------------------------
+
+3.利用embedding search related docs 用 maprerank 問 "這篇文章中，東部中國北部站點與南部站點的土壤有機碳含量有何不同？"
+"response" : {'intermediate_steps': [{'answer': ' This document does not answer the question',
+   'score': '0'},
+  {'answer': ' 這篇文章指出，土壤有機碳含量（SOC）從東部中國北部站點降低到南部站點。MBC和ASC也呈現由北到南下降的模式。',
+   'score': '100'},
+  {'answer': ' This document does not answer the question.', 'score': '0'},
+  {'answer': ' This document does not answer the question.', 'score': '0'}],
+ 'output_text': ' 這篇文章指出，土壤有機碳含量（SOC）從東部中國北部站點降低到南部站點。MBC和ASC也呈現由北到南下降的模式。'}
+
+============================
+
+4. 用relate doc中的 facts 來針對問題做整理
+
+prompt_template#1
+ttemplate_response = """You are a Botany/Biology docter & Agriculture expert.
+Given a part of document about Botany/Biology/Agriculture from a paper.
+
+%Question :
+{question}
+
+%Text/Summary :
+{facts_text}
+
+
+Given a question, write a systematic answer, if possible, give explanation for it. 
+The response must according facts and Botany/Biology/Agriculture knowledge as you know. 
+
+You alway response in traditional Chinese :
+"""
+
+"response" : "根據文章所提供的資料，東部中國北部站點與南部站點的土壤有機碳含量有所不同。文章指出，SOC含量從北部站點逐漸下降到南部站點，MBC和ASC也呈現下降趨勢。此外，SOC與MAP和MAT之間存在顯著的負相關，而SOC與土壤粘土含量和微生物CUE之間存在正相關。"
+
+
+
+
