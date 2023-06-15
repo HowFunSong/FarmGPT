@@ -3,7 +3,7 @@
 [問]
 template_question = """
 Task : Come up with “a relevant question”
-Role : Acts as  Docter&expert.
+Role : Acts as Docter&expert.
 Instruction : The question's answer should be relevant to information : {docs}. Retrive relevant information according to question
 Prompt formula : Let's consider question(中文回答) and briefly describe relevant information(中文回答)
 %format : "問題": question , "相關信息":relevant information
