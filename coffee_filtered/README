@@ -1,1 +1,59 @@
+#### 調整GPT提示格式
 
+[問]
+template_question = """
+Task : Come up with “a relevant question”
+Role : Acts as  Docter&expert.
+Instruction : The question's answer should be relevant to information : {docs}. Retrive relevant information according to question
+Prompt formula : Let's consider question(中文回答) and briefly describe relevant information(中文回答)
+%format : "問題": question , "相關信息":relevant information
+
+you must output in traditional Chinese(繁體中文),請用中文回答"
+
+"""
+[答]
+template_response = """
+Task : Answer a given question : {question}
+Role : Acts as Docter &expert.
+Instruction : answer the question : {question} according to {docs}, the answer should be clear and reasonable and logic, if there's premise or base on information/experiments/research , briefly describe it
+Prompt formula : “Answer the question, you should use tone of professor to describe the reason of answer,think answer step by step.
+%format : "answer"
+
+you must output in traditional Chinese(繁體中文),請用中文回答"
+
+"""
+
+####過濾輸出異常(不是問/答,未敘述前提,根據XXX等BJ4的問答) 
+blacklist = [
+      "無法回答",
+      "無法確定"
+      "這本書的作者",
+      "根據文章",
+      "未提到",
+      "根據本文",
+      "相關信息"
+    ]
+
+#通過率
+number of raw data:3174, 
+nuber of filtered data : 3038 
+Datapass % : 95.72 %
+
+=====================================================================================
+
+####JSON/CSV格式
+JSON 載入方法
+"""
+  import json
+  # 開啟 JSON 檔案
+  with open(fpath,"r",encoding="utf-8",errors="ignore") as f:
+      # 讀取 JSON 檔案
+      data = json.load(f)
+"""
+
+CSV 載入方法
+
+"""
+  import pandas as pd 
+  df_load = pd.read_csv("/content/gdrive/MyDrive/ML/dataset/coffee_filtered.csv")
+"""
