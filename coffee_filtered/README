@@ -34,10 +34,13 @@ blacklist = [
       "相關信息"
     ]
 
+blacklist_q = blacklist + ["相關信息","這些","問題","這篇","這項","本研究","根據表","文章","在研究中"]
+blacklist_a = blacklist + ["相關信息","這篇文章","這些研究"]
+
 #通過率
 number of raw data:3174, 
-nuber of filtered data : 3038 
-Datapass % : 95.72 %
+nuber of filtered data : 2805 
+Datapass % : 88.37 %
 
 =====================================================================================
 
