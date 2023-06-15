@@ -46,6 +46,7 @@ JSON 載入方法
 """
   import json
   # 開啟 JSON 檔案
+  fpath = "檔案路徑"
   with open(fpath,"r",encoding="utf-8",errors="ignore") as f:
       # 讀取 JSON 檔案
       data = json.load(f)
@@ -55,5 +56,6 @@ CSV 載入方法
 
 """
   import pandas as pd 
-  df_load = pd.read_csv("/content/gdrive/MyDrive/ML/dataset/coffee_filtered.csv")
+  fpath = "檔案路徑"
+  df_load = pd.read_csv(fpath)
 """
